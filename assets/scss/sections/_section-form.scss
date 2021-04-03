@@ -1,0 +1,59 @@
+.form {
+  display: block;
+  padding: $gap/2*3 0;
+  background-color: #2d3651;
+  margin: auto;
+  margin-top: 0rem;
+
+  &__container {
+    display: grid;
+    gap: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+   @extend %container;
+  }
+}
+
+.form-item {
+  display: block;
+
+  &__input,
+  &__btn--primary {
+    width: 420px;
+    height: 60px;
+    padding-right: $gap/2*3;
+    padding-left: $gap/2*3;
+
+    font-size: 1.125rem;
+    letter-spacing: 0.15em;
+    color: $color-light;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    transition: background-color 0.5s, border-color 0.5s;
+  }
+  &__input {
+    color: $color-light;
+
+    &:hover,
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.15);
+      border-bottom-color: $color-light;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  &__btn--primary {
+    @include sm-min {
+      min-width: 350px;
+    }
+    @include sm {
+      min-width: 100%;
+    }
+    &:hover {
+      background-color: $color-accent;
+    }
+  }
+}

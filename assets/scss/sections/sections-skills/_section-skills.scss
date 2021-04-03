@@ -1,0 +1,78 @@
+.skills {
+  @include sm-min {
+    margin-bottom: $gap/2 * 3;
+    padding: $gap/2;
+  }
+  @include sm {
+    padding: $gap;
+  }
+}
+
+.skills__container {
+  display: grid;
+
+  margin-bottom: $gap;
+
+  @include lg-min {
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    gap: $gap/2;
+  }
+  @include lg-md {
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+    gap: $gap/2;
+  }
+  @include md-sm {
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    gap: $gap/2;
+  }
+  @include sm {
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    gap: $gap;
+  }
+}
+
+.skills__actions {
+  display: flex;
+
+  justify-content: center;
+}
+
+.skill-item__image {
+  position: absolute;
+  @extend %size;
+
+  transition: transform 0.5s;
+
+  background-color: $color-primary;
+  background-position: center;
+  background-size: cover;
+}
+
+.skill-item_title {
+  position: absolute;
+  z-index: 2;
+ @extend %size;
+
+ 
+
+  letter-spacing: 0.1em;
+
+  @include md-min {
+    font-size: 1.25rem;
+  }
+  @include md {
+    font-size: 1.125rem;
+  }
+}
+
+.skill-item__link {
+  display: flex;
+
+  height: 100%;
+  padding: $gap;
+
+  transition: color 0.5s;
+
+  justify-content: center;
+  align-items: center;
+}

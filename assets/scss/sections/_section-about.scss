@@ -1,0 +1,60 @@
+.about {
+  position: relative;
+  max-width: 100%;
+  padding-top: $gap * 5;
+  padding-bottom: $gap * 5;
+  background-color: $color-gray-light;
+  letter-spacing: 0.055em;
+
+  &__container {
+    display: grid;
+
+    height: 521px;
+    @extend %container;
+
+    row-gap: 100px;
+    column-gap: 100px;
+    grid-template-columns: 1fr 271px;
+    @include md-sm {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+&__containt {
+  display: block;
+  padding-top: 0;
+  margin-bottom: 0;
+  height: 519px;
+}
+
+&__image {
+  display: grid;
+  height: 521;
+  align-content: center;
+  justify-items: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  line-height: 48px;
+  color: $color-primary;
+  font-weight: 700;
+  font-family: $font-header;
+  letter-spacing: 0.1em;
+  margin-top: 0;
+  margin-bottom: 56px;
+
+  line-height: 1.2em;
+}
+
+.text_about {
+  font-size: 18.2px;
+  letter-spacing: 0.043em;
+  color: $color-gray;
+  font-weight: 400;
+  font-family: $font-main;
+  line-height: $gap;
+}
