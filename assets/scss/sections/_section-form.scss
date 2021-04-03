@@ -2,16 +2,22 @@
   display: block;
   padding: $gap/2*3 0;
   background-color: #2d3651;
-  margin: auto;
-  margin-top: 0rem;
-
+  // margin: auto;
+  margin-top: 0;
+  
   &__container {
     display: grid;
-    gap: 20px;
-    row-gap: 20px;
-    column-gap: 20px;
+    @extend %container;
+    gap: $gap;
     grid-template-columns: repeat(3, 1fr);
-   @extend %container;
+    
+   
+    @include md-sm {
+      // grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @include sm {
+    display: grid;
   }
 }
 
@@ -20,7 +26,7 @@
 
   &__input,
   &__btn--primary {
-    width: 420px;
+    width: 100%;
     height: 60px;
     padding-right: $gap/2*3;
     padding-left: $gap/2*3;
