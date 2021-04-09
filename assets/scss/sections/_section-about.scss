@@ -24,12 +24,12 @@
     @include md-sm {
       grid-template-columns: 1fr 271px;
       min-width: 100%;
-      gap: 20px;
+      gap: $gap;
     }
     @include sm {
       grid-template-columns: 1fr;
       min-width: 100%;
-      gap: 20px;
+      gap: $gap;
     }
   }
 

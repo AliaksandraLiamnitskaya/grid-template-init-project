@@ -1,21 +1,21 @@
 .footer {
   height: 250px;
   text-align: center;
-  padding: 50px 20px 70px 20px;
+  padding: $gap/2*5 $gap $gap/2*7 $gap;
   background-color: $color-primary;
   
   @include lg-min {
-    margin-top: 100px;
+    margin-top: $gap * 5;
     
   }
   @include lg-md {
-    margin-top: 80px;
+    margin-top: $gap * 4;
   }
   @include md-sm {
-    margin-top: 60px;
+    margin-top: $gap * 3;
   }
   @include sm {
-    margin-top: 60px;
+    margin-top: $gap * 3;
     
   }
 
@@ -29,9 +29,9 @@
 .footer__social {
   display: block;
   position: relative;
-  font-size: 36px;
+  font-size: 2.25rem;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: $gap * 2;
   font-weight: 400;
   letter-spacing: 0.15em;
 
